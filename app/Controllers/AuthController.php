@@ -47,6 +47,8 @@ class AuthController extends Controller
             'nivelacceso' => $usuario->nivelacceso,
             'logged_in' => true
         ]);
+
+        return $this->redirigirSegunRol();
     }
     public function logout()
     {
