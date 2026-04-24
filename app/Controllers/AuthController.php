@@ -60,7 +60,7 @@ class AuthController extends Controller
     {
         //Es imposible llegar a este metodo, si no hemos realizado el inicio de session
         return session()->get('nivelacceso') === 'administrador' ?
-            redirect()->to('/admin/dashboard') : redirect('/invitado/panel');
+            redirect()->to('/admin/dashboard') : redirect()->to('/invitado/panel');
 
     }
 }
